@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.6.96/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>w4d3</title>
+</head>
+
+<body>
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="row flex-column">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary mt-2" data-bs-toggle="offcanvas" data-bs-target="#pokedex-offcanvas">Find a pokemon</button>
+                    </div>
+                    <div id="active-pokemon" class="col-12 mt-3 flex-grow-1">
+                        <!-- active pokemon -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row" id="pc-pokemon">
+                    <div class="col-12">
+                        <h2 class="text-center">Pokemon in your PC</h2>
+                    </div>
+                    <div id="pc-pokemon-list" class="col-12 mt-3">
+                        <!-- PC Pokemon List -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Pokedex offcanvas start -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="pokedex-offcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Pokedex</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body px-0">
+        <input class="form-control mb-2" type="text" placeholder="Search pokemon" id="pokedex-search" oninput="app.pokedexController.searchPokedex()" value="" />
+        <div id="pokedex-list" class="flex-grow-1">
+            <!-- Pokedex pokemon will replace this -->
+        </div>
+    </div>
+  </div>
+<!-- Pokedex offcanvas end -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+<script src="app/main.js" type="module"></script>
+
+</body>
+</html>

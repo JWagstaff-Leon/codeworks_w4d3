@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./_overrides.scss";
+@import "./custom.scss";
+@import "./loaders.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $body-bg;
+}
+
+main {
+  flex-grow: 1;
+}
+
+#pokedex-list button
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+}
+
+.nickname-edit
+{
+    border: none;
+    background-color: transparent;
+}
+
+.nickname-edit:focus
+{
+    background-color: transparent;
+    text-transform: none !important;
+}
+
+.pokemon-img
+{
+    max-height: 100%;
+    max-width: 50%;
+    object-fit: contain;
+}
+
+#pc-pokemon
+{
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.pc-pokemon-list-item
+{
+    max-height: 300px;
+}
+
+#pokedex-list
+{
+    max-height: 100%;
+    overflow-y: auto;
+}
